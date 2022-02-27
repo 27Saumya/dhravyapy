@@ -9,6 +9,6 @@ class HTTPClient(aiohttp.ClientSession):
 
     async def get(self, url: str) -> aiohttp.ClientResponse:
         return await super().get(self.BASE_URL + url)
-    
+
     async def _get(self, url: str) -> aiohttp.ClientResponse:
         return await super().get(url)

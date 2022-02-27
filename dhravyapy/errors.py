@@ -1,6 +1,8 @@
 class Error(Exception):
     """Base class for exceptions in this module."""
+
     pass
+
 
 class ValidationError(Error):
     """Exception raised for errors in the input.
@@ -13,7 +15,8 @@ class ValidationError(Error):
 
     def __init__(self, message):
         self.message = message
-    
+
+
 class HTTPException(Error):
     """Exception raised for HTTP errors.
 

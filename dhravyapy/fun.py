@@ -1,7 +1,7 @@
 from .http import HTTPClient
 from typing import *
 from .errors import *
-from .assets import Meme, TruthOrDare
+from .assets import GeneralImage, Meme, TruthOrDare
 
 
 class Fun:
@@ -49,18 +49,25 @@ class Fun:
         else:
             raise HTTPException(f"HTTP Error: {response.status}")
 
-    async def single_meme(self) -> str:
+    async def single_meme(self) -> GeneralImage:
         """
-        :class:`str`: Gets a single meme from the API.
+        :class:`GeneralImage`: Gets a single meme from the API.
 
         Note::
-            This just returns the URL of the endpoint.
+            This just returns the :class:`GeneralImage` class.
+            You can only use `.save()` in this method.
             Reason::
                 There is no json in this response.
                 There is direct the image of the meme.
                 If you want a meme with all properties, use :meth:`meme`.
         """
-        return await HTTPClient().get("meme")
+        response = await HTTPClient().get("meme")
+
+        if response.status == 200:
+            return GeneralImage(await response.read())
+
+        else:
+            raise HTTPException(f"HTTP Error: {response.status}")
 
     async def wyr(self, simple: Optional[bool] = False) -> List[str]:
         """

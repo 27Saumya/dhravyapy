@@ -422,35 +422,9 @@ class Animal:
         await f.close()
 
 
-class MemeImage:
+class GeneralImage:
     """
-    The class to return the data from the "creat_meme" endpoints.
-    """
-
-    def __init__(self, _bytes: Union[bytes, str]):
-        self.bytes = _bytes
-
-    async def save(self, path: str) -> None:
-        """
-        Save the image of the meme.
-
-        Parameters
-        ----------
-        path : Filename and the Path to save the image :class:`str`
-
-        Example
-        -------
-        >>> meme = await dhravyapy.Image().create_meme("top", "bottom", "img_url")
-        >>> await dog.save("dog.png")
-        """
-        f = await aiofiles.open(path, "wb")
-        await f.write(self.bytes)
-        await f.close()
-
-
-class WaifuImage:
-    """
-    The class to return the data from the "waifu" endpoint.
+    The class to return the data from images in general endpoints.
     """
 
     def __init__(self, _bytes: Union[bytes, str]):
@@ -458,7 +432,7 @@ class WaifuImage:
 
     async def save(self, path: str) -> None:
         """
-        Save the image of the waifu.
+        Save the image.
 
         Parameters
         ----------

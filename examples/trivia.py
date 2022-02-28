@@ -2,8 +2,9 @@ import dhravyapy
 import asyncio
 
 async def main():
-    qn = dhravyapy.Trivia().question
-    ans = dhravyapy.Trivia().answer
+    trivia = dhravyapy.Info().trivia()
+    question = trivia.question
+    ans = trivia.answer
 
     x = input(f"{question} \n Type the answer...")
 

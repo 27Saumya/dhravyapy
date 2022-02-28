@@ -2,8 +2,9 @@ import dhravyapy
 import asyncio
 
 async def main():
-    truth = dhravyapy.TruthOrDare().truth
-    dare = dhravyapy.TruthOrDare().dare
+    tod = dhravyapy.Fun.truthordare()
+    truth = tod.truth
+    dare = tod.dare
     print(f"If you wanted dare here is a dare : {dare}")
     print(f"If you wanted a truth here is a truth : {truth}")
 

@@ -11,6 +11,9 @@ __license__ = "MIT"
 __version__ = "0.0.1"
 
 from .fun import *
+from .image import *
+from .info import *
+from .misc import *
 from typing import Dict, Union
 
 

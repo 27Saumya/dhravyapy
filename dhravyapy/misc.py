@@ -113,3 +113,23 @@ class Misc:
 
         else:
             raise HTTPException(f"HTTP Error: {response.status}")
+
+    async def autofill(self, query: str) -> List[str]:
+        """
+        :class:`List[str]`: Gets autofill suggestions for the query.
+
+        Parameters
+        ----------
+        query : The query to get autofill suggestions for. :class:`str`
+        """
+        response = await HTTPClient().get(f"autofill?query={query}")
+
+        if response.status == 200:
+            json = await response.json()
+            return json["data"]
+
+        elif response.status == 422:
+            raise ValidationError("Recieved an invalid input")
+
+        else:
+            raise HTTPException(f"HTTP Error: {response.status}")

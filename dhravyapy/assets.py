@@ -394,3 +394,81 @@ class RandomUserInfo:
         :class:`dict`: The user's json in a dictionary.
         """
         return self.json["data"]
+
+
+class Animal:
+    """
+    The class to return the data from the "animal" endpoint.
+    """
+
+    def __init__(self, _bytes: Union[bytes, str]):
+        self.bytes = _bytes
+
+    async def save(self, path: str) -> None:
+        """
+        Save the image of the animal.
+
+        Parameters
+        ----------
+        path : Filename and the Path to save the image :class:`str`
+
+        Example
+        -------
+        >>> dog = await dhravyapy.Animal().dog()
+        >>> await dog.save("dog.png")
+        """
+        f = await aiofiles.open(path, "wb")
+        await f.write(self.bytes)
+        await f.close()
+
+
+class MemeImage:
+    """
+    The class to return the data from the "creat_meme" endpoints.
+    """
+
+    def __init__(self, _bytes: Union[bytes, str]):
+        self.bytes = _bytes
+
+    async def save(self, path: str) -> None:
+        """
+        Save the image of the meme.
+
+        Parameters
+        ----------
+        path : Filename and the Path to save the image :class:`str`
+
+        Example
+        -------
+        >>> meme = await dhravyapy.Image().create_meme("top", "bottom", "img_url")
+        >>> await dog.save("dog.png")
+        """
+        f = await aiofiles.open(path, "wb")
+        await f.write(self.bytes)
+        await f.close()
+
+
+class WaifuImage:
+    """
+    The class to return the data from the "waifu" endpoint.
+    """
+
+    def __init__(self, _bytes: Union[bytes, str]):
+        self.bytes = _bytes
+
+    async def save(self, path: str) -> None:
+        """
+        Save the image of the waifu.
+
+        Parameters
+        ----------
+        path : Filename and the Path to save the image :class:`str`
+
+        Example
+        -------
+        >>> waifu = await dhravyapy.Image().waifu()
+        >>> await waifu.save("waifu.png")
+        """
+        f = await aiofiles.open(path, "wb")
+        await f.write(self.bytes)
+        await f.close()

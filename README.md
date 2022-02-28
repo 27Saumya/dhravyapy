@@ -1,10 +1,9 @@
-# DhravyaPy is a basic and an asynchronous API Wrapper for the [DhravyaAPI](https://api.dhravya.me)
+# DhravyaPy is a basic, asynchronous wrapper for the [DhravyaAPI](https://api.dhravya.me)
 
 ## Features
   * Easy to use OOP
   * Get random jokes
   * Get random topics
-  * Play some games
   * Generate images and memes
 
 ## Prerequisites
@@ -17,7 +16,7 @@ To install the library through [PyPi](pypi.org) use:-
 pip install dhravyapy
 ```
 
-To install the developed version use (Requires Git):-
+To install the development version(using git):-
 ```
 pip install git+https://github.com/27Saumya/dhravyapy
 ```

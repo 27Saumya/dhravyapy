@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 from pathlib import Path
 this_directory = Path(__file__).parent
@@ -10,17 +10,12 @@ with open('requirements.txt') as f:
 
 version = "0.0.1"
 
-
-packages = [
-    "dhravyapy"
-]
-
 setup(
     name='dhravyapy',
     author="27Saumya",
     url="https://github.com/27Saumya/dhravyapy",
     version=version,
-    packages=packages,
+    packages=find_packages("dhravyapy"),
     license='MIT',
     description='An asynchronous wrapper for interacting with the Dhravya API',
     long_description=long_description,

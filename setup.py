@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 from pathlib import Path
 this_directory = Path(__file__).parent
@@ -15,7 +15,7 @@ setup(
     author="27Saumya",
     url="https://github.com/27Saumya/dhravyapy",
     version=version,
-    packages=find_packages("dhravyapy"),
+    packages=["dhravyapy"],
     license='MIT',
     description='An asynchronous wrapper for interacting with the Dhravya API',
     long_description=long_description,

@@ -297,7 +297,7 @@ class RandomUserInfo:
         return self.json["data"]["gender"]
 
     @property
-    def location(self) -> Dict[Union[int, str]]:
+    def location(self) -> Dict[str, Union[int, str]]:
         """
         Dict[Union[:class:`int`, :class:`str`]]`: The location of the user in a dictionary
         """
@@ -318,7 +318,7 @@ class RandomUserInfo:
         return self.json["data"]["location"]["timezone"]["description"]
 
     @property
-    def login(self) -> Dict[str]:
+    def login(self) -> Dict[str, Union[str, int]]:
         """
         Dict[:class:`str`] The login of the user in a dictionary
         """
@@ -360,7 +360,7 @@ class RandomUserInfo:
         return self.json["data"]["cell"]
 
     @property
-    def id(self) -> Dict[str]:
+    def id(self) -> Dict[str, Union[int, str]]:
         """
         Dict[:class:`str`]: The id of the user.
         """

@@ -17,7 +17,7 @@ from .misc import *
 from typing import Dict, Union
 
 
-async def stats() -> Dict[Union[str, int]]:
+async def stats() -> Dict[str, Union[str, int]]:
     """
     :class:`dict`: Gets the stats of the API.
     """

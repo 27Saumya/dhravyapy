@@ -2,7 +2,6 @@ from typing import *
 from .http import HTTPClient
 import aiofiles
 from .errors import HTTPException
-from .info import Info
 
 
 class Meme:

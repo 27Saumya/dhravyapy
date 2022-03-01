@@ -5,7 +5,7 @@
 ### DhravyaPy works with [Python 3.8+](https://python.org)
 
 ### Features
-  * Easy to use OOP
+  * Easy to use OOP design
   * Get random jokes
   * Get random topics
   * Generate images and memes

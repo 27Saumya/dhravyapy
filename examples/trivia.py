@@ -6,12 +6,12 @@ async def main():
     question = trivia.question
     ans = trivia.answer
 
-    x = input(f"{question} \n Type the answer...")
+    x = input(f"{question} \nType the answer...")
 
     if x.lower() == ans.lower():
-        print("Good job you got the right answer")
+        print("Good job you got the right answer!")
     else:
-        print(":/ Lets do a different answer next time")
+        print(":/ Lets do a different question")
 
 
 if __name__ == __main__:

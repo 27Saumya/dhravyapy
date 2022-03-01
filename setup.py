@@ -14,7 +14,7 @@ setup(
     name='dhravyapy',
     author="27Saumya",
     url="https://github.com/27Saumya/dhravyapy",
-    download_url="https://github.com/27Saumya/dhravyapy/archive/v0.0.3.tar.gz",
+    download_url="https://github.com/27Saumya/dhravyapy/archive/v0.0.4.tar.gz",
     version=version,
     packages=["dhravyapy"],
     license='MIT',

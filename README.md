@@ -1,16 +1,14 @@
-# DhravyaPy
+<div align="center">DhravyaPy</div>
 
 ## DhravyaPy is a basic, asynchronous wrapper for the [DhravyaAPI](https://api.dhravya.me)
+
+### DhravyaPy works with [Python 3.8+](https://python.org)
 
 ### Features
   * Easy to use OOP
   * Get random jokes
   * Get random topics
   * Generate images and memes
-
-### Prerequisites
-  * Python 3.8+
-  * requirements.txt
 
 ### Installation
 To install the library through [PyPi](pypi.org) use:-
@@ -45,7 +43,10 @@ import dhravyapy
 import asyncio
 
 async def main():
-    qrcode = await dhravyapy.Image().qrcode("https://api.dhravya.me")
+    # the text of the qrcode(can be links or just normal text)
+    text = "https://api.dhravya.me" 
+    qrcode = await dhravyapy.Image().qrcode(text)
+    # saving the image of the qrcode
     await qrcode.save("qrcode.png")
 
 
@@ -53,3 +54,5 @@ if __name__ == __main__:
     loop = asyncio.get_event_loop()
     loop.run_until_complete(main())
 ```
+
+For more examples see the examples directory.

@@ -2,8 +2,12 @@ import dhravyapy
 import asyncio
 
 async def main():
-    single_meme = await dhravyapy.Fun().single_meme() # Returns only the meme... no additional dict data.
+    # returns only the meme, no additional dict data
+    single_meme = await dhravyapy.Fun().single_meme() 
+    # saving the meme image
     await single_meme.save()
+    
+    # getting a meme from a query string
     meme = await dhravyapy.Fun().meme("random")
     print(meme.url)
 

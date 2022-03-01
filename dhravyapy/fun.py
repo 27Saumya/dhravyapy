@@ -1,7 +1,7 @@
 from .http import HTTPClient
 from typing import *
 from .errors import *
-from .assets import GeneralImage, Meme, TruthOrDare
+from .assets import Meme, TruthOrDare, GeneralImage
 
 
 class Fun:

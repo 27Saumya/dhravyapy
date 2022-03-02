@@ -32,6 +32,14 @@ class Meme:
             await f.close()
         else:
             raise HTTPException(f"HTTP Error: {r.status}")
+            
+    aysnc def bytes(self):
+        r = await HTTPClient()._get(self.url)
+        if r.status == 200:
+            bytes = await r.read()
+            return bytes
+        else:
+            raise HTTPException(f"HTTP Error: {r.status}")
 
     @property
     def url(self) -> str:

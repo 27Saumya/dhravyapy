@@ -1,4 +1,6 @@
-<div align="center">DhravyaPy</div>
+<div align="center">DhravyaPy</div
+ 
+<div align="center">https://img.shields.io/pypi/dw/dhravyapy?color=blue</div>
 
 ## DhravyaPy is a basic, asynchronous wrapper for the [DhravyaAPI](https://api.dhravya.me)
 

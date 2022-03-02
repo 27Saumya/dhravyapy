@@ -32,7 +32,7 @@ async def main():
     print(joke)
 
 
-if __name__ == __main__:
+if __name__ == "__main__":
     loop = asyncio.get_event_loop()
     loop.run_until_complete(main())
 ```
@@ -50,7 +50,7 @@ async def main():
     await qrcode.save("qrcode.png")
 
 
-if __name__ == __main__:
+if __name__ == "__main__":
     loop = asyncio.get_event_loop()
     loop.run_until_complete(main())
 ```

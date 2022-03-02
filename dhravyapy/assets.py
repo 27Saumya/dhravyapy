@@ -1,9 +1,10 @@
 from typing import *
 from io import BytesIO
-from .http import HTTPClient
 import aiofiles
-from .errors import HTTPException
 
+from .http import HTTPClient
+from .errors import HTTPException
+from .info import Info
 
 class Meme:
     """
@@ -199,8 +200,6 @@ class SongInfo:
         """
         :class:`str`: The lyrics of the song.
         """
-        # FIXME: Info not defined
-        # @27Saumya
         await Info().lyrics(self.json["response"]["result"]["full_title"])
 
     @property

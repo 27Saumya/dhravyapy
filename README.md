@@ -1,6 +1,6 @@
 <div align="center">DhravyaPy</div
  
-<div align="center">
+<div align="left">
 <a href="https://pypi.org/project/brawlpy">
     <img alt="Downloads" src="https://img.shields.io/pypi/dm/brawlpy?color=blue">
 </div>

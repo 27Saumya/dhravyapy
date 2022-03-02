@@ -1,4 +1,4 @@
-<div align="center">**DhravyaPy**</div
+<div align="center"><b>DhravyaPy<b></div
  
 <div align="left">
 <a href="https://pypi.org/project/brawlpy">

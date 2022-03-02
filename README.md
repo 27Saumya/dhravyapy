@@ -2,7 +2,7 @@
  
 <div align="left">
 <a href="https://pypi.org/project/brawlpy">
-    <img alt="Downloads" src="https://img.shields.io/pypi/dm/brawlpy?color=blue">
+    <img alt="Downloads" src="https://img.shields.io/pypi/dw/dhravyapy?color=blue">
 </div>
 
 ## DhravyaPy is a basic, asynchronous wrapper for the [DhravyaAPI](https://api.dhravya.me)

@@ -33,7 +33,7 @@ class Meme:
         else:
             raise HTTPException(f"HTTP Error: {r.status}")
             
-    aysnc def bytes(self):
+    async def bytes(self):
         r = await HTTPClient()._get(self.url)
         if r.status == 200:
             bytes = await r.read()

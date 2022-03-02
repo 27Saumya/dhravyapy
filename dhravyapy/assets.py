@@ -1,4 +1,5 @@
 from typing import *
+from io import BytesIO
 from .http import HTTPClient
 import aiofiles
 from .errors import HTTPException
@@ -30,6 +31,21 @@ class Meme:
             f = await aiofiles.open(path, "wb")
             await f.write(await r.read())
             await f.close()
+        else:
+            raise HTTPException(f"HTTP Error: {r.status}")
+            
+    async def get_bytes(self) -> BytesIO:
+        """
+        Returns the meme as a BytesIO object
+
+        Example
+        -------
+        >>> meme = await dhravyapy.Fun().meme("random")
+        >>> meme_bytes = await meme.get_bytes()
+        """
+        r = await HTTPClient()._get(self.url)
+        if r.status == 200:
+            return BytesIO(await r.read())
         else:
             raise HTTPException(f"HTTP Error: {r.status}")
 
@@ -183,6 +199,8 @@ class SongInfo:
         """
         :class:`str`: The lyrics of the song.
         """
+        # FIXME: Info not defined
+        # @27Saumya
         await Info().lyrics(self.json["response"]["result"]["full_title"])
 
     @property
@@ -420,6 +438,17 @@ class Animal:
         await f.write(self.bytes)
         await f.close()
 
+    async def get_bytes(self) -> bytes :
+        """
+        Get the image of the animal in bytes.
+
+        Example
+        -------
+        >>> dog = await dhravyapy.Animal().dog()
+        >>> await dog.get_bytes()
+        """
+        return BytesIO(self.bytes)
+
 
 class GeneralImage:
     """
@@ -445,3 +474,14 @@ class GeneralImage:
         f = await aiofiles.open(path, "wb")
         await f.write(self.bytes)
         await f.close()
+
+    async def get_bytes(self) -> bytes :
+        """
+        Get the image in bytes.
+
+        Example
+        -------
+        >>> waifu = await dhravyapy.Image().waifu()
+        >>> await waifu.get_bytes()
+        """
+        return BytesIO(self.bytes)

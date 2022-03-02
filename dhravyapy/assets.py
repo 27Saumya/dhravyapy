@@ -34,17 +34,6 @@ class Meme:
         else:
             raise HTTPException(f"HTTP Error: {r.status}")
             
-    async def bytes(self):
-        """
-        Get images bytes
-        """
-        r = await HTTPClient()._get(self.url)
-        if r.status == 200:
-            bytes = await r.read()
-            return bytes
-        else:
-            raise HTTPException(f"HTTP Error: {r.status}")
-
     async def get_bytes(self) -> BytesIO:
         """
         Returns the meme as a BytesIO object

@@ -34,6 +34,9 @@ class Meme:
             raise HTTPException(f"HTTP Error: {r.status}")
             
     async def bytes(self):
+        """
+        Get images bytes
+        """
         r = await HTTPClient()._get(self.url)
         if r.status == 200:
             bytes = await r.read()

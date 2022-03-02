@@ -186,12 +186,15 @@ class Image:
         else:
             raise HTTPException(f"HTTP Error: {response.status}")
 
-    
-    async def qrcode(self, query: str, drawer: Optional[int] = 1, mask: Optional[int] = 1) -> GeneralImage:
+    async def qrcode(
+        self, query: str, drawer: Optional[int] = 1, mask: Optional[int] = 1
+    ) -> GeneralImage:
         """
         :class:`GeneralImage` Gets a qrcode image.
         """
-        response = await HTTPClient().get(f"qrcode?query={query}&drawer={drawer}&mask={mask}")
+        response = await HTTPClient().get(
+            f"qrcode?query={query}&drawer={drawer}&mask={mask}"
+        )
 
         if response.status == 200:
             return GeneralImage(await response.read())

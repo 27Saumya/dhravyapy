@@ -1,6 +1,7 @@
 import dhravyapy
 import asyncio
 
+
 async def main():
     trivia = dhravyapy.Info().trivia()
     question = trivia.question
@@ -14,6 +15,6 @@ async def main():
         print(":/ Lets do a different question")
 
 
-if __name__ == __main__:
+if __name__ == "__main__":
     loop = asyncio.get_event_loop()
     loop.run_until_complete(main())

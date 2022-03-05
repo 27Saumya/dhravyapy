@@ -9,13 +9,13 @@ requirements = []
 with open("requirements.txt") as f:
     requirements = f.read().splitlines()
 
-version = "0.0.6"
+VERSION = "0.0.6"
 
 setup(
     name="dhravyapy",
     author="27Saumya",
     url="https://github.com/27Saumya/dhravyapy",
-    download_url="https://github.com/27Saumya/dhravyapy/archive/v0.0.6.tar.gz",
+    download_url="https://github.com/27Saumya/dhravyapy/archive/v{}.tar.gz".format(VERSION),
     version=version,
     packages=["dhravyapy"],
     license="MIT",

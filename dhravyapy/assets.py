@@ -4,7 +4,7 @@ import aiofiles
 
 from .http import HTTPClient
 from .errors import HTTPException
-from dhravyapy.info import Info
+from .info import Info
 
 class Meme:
     """

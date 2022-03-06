@@ -1,7 +1,7 @@
 <div align="center"><b>DhravyaPy</b></div
  
 <div align="left">
-<a href="https://pypi.org/project/brawlpy">
+<a href="https://pypi.org/project/dhravyapy">
     <img alt="Downloads" src="https://img.shields.io/pypi/dw/dhravyapy?color=blue">
 </div>
 
@@ -29,11 +29,11 @@ pip install git+https://github.com/27Saumya/dhravyapy
 ### Examples
 To get a random joke
 ```py
-import dhravyapy
+import dhravya
 import asyncio
 
 async def main():
-    joke = await dhravyapy.Fun().joke()
+    joke = await dhravya.Fun().joke()
     print(joke)
 
 
@@ -44,13 +44,13 @@ if __name__ == "__main__":
 
 To generate a qrcode
 ```py
-import dhravyapy
+import dhravya
 import asyncio
 
 async def main():
     # the text of the qrcode(can be links or just normal text)
     text = "https://api.dhravya.me" 
-    qrcode = await dhravyapy.Image().qrcode(text)
+    qrcode = await dhravya.Image().qrcode(text)
     # saving the image of the qrcode
     await qrcode.save("qrcode.png")
 

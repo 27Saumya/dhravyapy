@@ -28,7 +28,7 @@ import aiofiles
 
 from .http import HTTPClient
 from .errors import HTTPException
-from .info import Info
+import dhravya
 
 class Meme:
     """
@@ -224,7 +224,7 @@ class SongInfo:
         """
         :class:`str`: The lyrics of the song.
         """
-        await Info().lyrics(self.json["response"]["result"]["full_title"])
+        return await dhravya.info.Info().lyrics(self.json["response"]["result"]["full_title"])
 
     @property
     def dict(self) -> dict:

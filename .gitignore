@@ -4,3 +4,4 @@
 *dist
 *setup.cfg
 *build/
+*test.py

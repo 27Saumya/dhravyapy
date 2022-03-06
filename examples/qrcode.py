@@ -1,11 +1,11 @@
-import dhravyapy
+import dhravya
 import asyncio
 
 
 async def main():
     # the text of the qrcode(can be links or just normal text)
     text = "https://api.dhravya.me"
-    qrcode = await dhravyapy.Image().qrcode(text)
+    qrcode = await dhravya.Image().qrcode(text)
     # saving the image of the qrcode
     await qrcode.save("qrcode.png")
 

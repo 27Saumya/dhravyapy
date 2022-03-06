@@ -17,7 +17,7 @@ setup(
     url="https://github.com/27Saumya/dhravyapy",
     download_url="https://github.com/27Saumya/dhravyapy/archive/v{}.tar.gz".format(VERSION),
     version=VERSION,
-    packages=["dhravyapy"],
+    packages=["dhravya"],
     license="MIT",
     description="An asynchronous wrapper for interacting with the Dhravya API",
     long_description=long_description,

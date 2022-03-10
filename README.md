@@ -33,7 +33,7 @@ import dhravya
 import asyncio
 
 async def main():
-    joke = await dhravya.Fun().joke()
+    joke = await dhravya.Fun.joke()
     print(joke)
 
 
@@ -50,7 +50,7 @@ import asyncio
 async def main():
     # the text of the qrcode(can be links or just normal text)
     text = "https://api.dhravya.me" 
-    qrcode = await dhravya.Image().qrcode(text)
+    qrcode = await dhravya.Image.qrcode(text)
     # saving the image of the qrcode
     await qrcode.save("qrcode.png")
 

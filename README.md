@@ -16,7 +16,7 @@
   * Generate images and memes
 
 ### Installation
-To install the library through [PyPi](pypi.org) use:-
+To install the library through [PyPi](https://pypi.org) use:-
 ```
 pip install dhravyapy
 ```

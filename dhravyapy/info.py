@@ -34,7 +34,7 @@ class Info:
     """
 
     @classmethod
-    async def fact(self, simple: Optional[bool] = False) -> str:
+    async def fact(cls, simple: Optional[bool] = False) -> str:
         """
         :class:`str`: Gets a random fact.
 
@@ -55,7 +55,7 @@ class Info:
             raise HTTPException(f"HTTP Error: {response.status}")
 
     @classmethod
-    async def trivia(self, simple: Optional[bool] = False) -> Trivia:
+    async def trivia(cls, simple: Optional[bool] = False) -> Trivia:
         """
         :class:`str`: Gets a random trivia question.
 
@@ -76,7 +76,7 @@ class Info:
             raise HTTPException(f"HTTP Error: {response.status}")
 
     @classmethod
-    async def lyrics(self, song: str, simple: Optional[bool] = False) -> str:
+    async def lyrics(cls, song: str, simple: Optional[bool] = False) -> str:
         """
         :class:`str`: Gets the lyrics of a song.
 
@@ -98,7 +98,7 @@ class Info:
             raise HTTPException(f"HTTP Error: {response.status}")
 
     @classmethod
-    async def song_info(self, song: str) -> SongInfo:
+    async def song_info(cls, song: str) -> SongInfo:
         """
         :class:`str`: Gets the information of a song.
 
@@ -119,7 +119,7 @@ class Info:
             raise HTTPException(f"HTTP Error: {response.status}")
 
     @classmethod
-    async def minecraft_status(self, host: str, port: Optional[str] = None) -> str:
+    async def minecraft_status(cls, host: str, port: Optional[str] = None) -> str:
         """
         :class:`str`: Gets the status of a minecraft server.
 
@@ -141,7 +141,7 @@ class Info:
             raise HTTPException(f"HTTP Error: {response.status}")
 
     @classmethod
-    async def bored(self) -> str:
+    async def bored(cls) -> str:
         """
         :class:`str`: Gets a bored fact.
         """
@@ -155,7 +155,7 @@ class Info:
             raise HTTPException(f"HTTP Error: {response.status}")
 
     @classmethod
-    async def numberfact(self, number: int) -> str:
+    async def numberfact(cls, number: int) -> str:
         """
         :class:`str`: Gets a fact about a number.
 

@@ -3,7 +3,7 @@ import asyncio
 
 
 async def main():
-    joke = await dhravyapy.Fun().joke()
+    joke = await dhravyapy.Fun.joke()
     print(joke)
 
 

@@ -34,7 +34,7 @@ class Image:
     """
 
     @classmethod
-    async def cat(self) -> Animal:
+    async def cat(cls) -> Animal:
         """
         :class:`GeneralImage` Gets a random cat picture.
         """
@@ -47,7 +47,7 @@ class Image:
             raise HTTPException(f"HTTP Error: {response.status}")
 
     @classmethod
-    async def dog(self) -> Animal:
+    async def dog(cls) -> Animal:
         """
         :class:`GeneralImage` Gets a random dog picture.
         """
@@ -60,7 +60,7 @@ class Image:
             raise HTTPException(f"HTTP Error: {response.status}")
 
     @classmethod
-    async def fox(self) -> Animal:
+    async def fox(cls) -> Animal:
         """
         :class:`GeneralImage` Gets a random fox picture.
         """
@@ -73,7 +73,7 @@ class Image:
             raise HTTPException(f"HTTP Error: {response.status}")
 
     @classmethod
-    async def create_meme(self, top: str, bottom: str, image: Optional[str] = None) -> GeneralImage:
+    async def create_meme(cls, top: str, bottom: str, image: Optional[str] = None) -> GeneralImage:
         """
         :class:`GeneralImage` Creates a meme image.
         """
@@ -89,7 +89,7 @@ class Image:
             raise HTTPException(f"HTTP Error: {response.status}")
 
     @classmethod
-    async def mealsome(self, me: str, alsome: str) -> GeneralImage:
+    async def mealsome(cls, me: str, alsome: str) -> GeneralImage:
         """
         :class:`GeneralImage` Creates a me - also me meme image.
         """
@@ -105,7 +105,7 @@ class Image:
             raise HTTPException(f"HTTP Error: {response.status}")
 
     @classmethod
-    async def itsretarded(self, text: str) -> GeneralImage:
+    async def itsretarded(cls, text: str) -> GeneralImage:
         """
         :class:`GeneralImage` Creates a retarded meme image.
         """
@@ -121,7 +121,7 @@ class Image:
             raise HTTPException(f"HTTP Error: {response.status}")
 
     @classmethod
-    async def headache(self, text: str) -> GeneralImage:
+    async def headache(cls, text: str) -> GeneralImage:
         """
         :class:`GeneralImage` Creates a headache meme image.
         """
@@ -137,7 +137,7 @@ class Image:
             raise HTTPException(f"HTTP Error: {response.status}")
 
     @classmethod
-    async def classnote(self, text: str) -> GeneralImage:
+    async def classnote(cls, text: str) -> GeneralImage:
         """
         :class:`GeneralImage` Creates a classnote meme image.
         """
@@ -153,7 +153,7 @@ class Image:
             raise HTTPException(f"HTTP Error: {response.status}")
 
     @classmethod
-    async def nutbutton(self, text: str) -> GeneralImage:
+    async def nutbutton(cls, text: str) -> GeneralImage:
         """
         :class:`GeneralImage` Creates a nutbutton meme image.
         """
@@ -169,7 +169,7 @@ class Image:
             raise HTTPException(f"HTTP Error: {response.status}")
 
     @classmethod
-    async def pills(self, text: str) -> GeneralImage:
+    async def pills(cls, text: str) -> GeneralImage:
         """
         :class:`GeneralImage` Creates a pills meme image.
         """
@@ -185,7 +185,7 @@ class Image:
             raise HTTPException(f"HTTP Error: {response.status}")
 
     @classmethod
-    async def balloon(self, text: str, person: str, stopper: str) -> GeneralImage:
+    async def balloon(cls, text: str, person: str, stopper: str) -> GeneralImage:
         """
         :class:`GeneralImage` Creates a balloon meme image.
         """
@@ -201,7 +201,7 @@ class Image:
             raise HTTPException(f"HTTP Error: {response.status}")
 
     @classmethod
-    async def waifu(self) -> GeneralImage:
+    async def waifu(cls) -> GeneralImage:
         """
         :class:`GeneralImage` Gets a waifu image.
         """
@@ -217,7 +217,7 @@ class Image:
             raise HTTPException(f"HTTP Error: {response.status}")
 
     @classmethod
-    async def qrcode(self, query: str, drawer: Optional[int] = 1, mask: Optional[int] = 1) -> GeneralImage:
+    async def qrcode(cls, query: str, drawer: Optional[int] = 1, mask: Optional[int] = 1) -> GeneralImage:
         """
         :class:`GeneralImage` Gets a qrcode image.
         """

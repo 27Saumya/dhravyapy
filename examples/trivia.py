@@ -3,13 +3,13 @@ import asyncio
 
 
 async def main():
-    trivia = dhravyapy.Info().trivia()
+    trivia = await dhravyapy.Info.trivia()
     question = trivia.question
-    ans = trivia.answer
+    answer = trivia.answer
 
     x = input(f"{question} \nType the answer...")
 
-    if x.lower() == ans.lower():
+    if x.lower() == answer.lower():
         print("Good job you got the right answer!")
     else:
         print(":/ Lets do a different question")

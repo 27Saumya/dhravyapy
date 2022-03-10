@@ -52,7 +52,7 @@ class Fun:
             raise HTTPException(f"HTTP Error: {response.status}")
 
     @classmethod
-    async def meme(cls, topic: str) -> Meme:
+    async def meme(cls, *, topic: Optional[str] = None) -> Union[Meme, GeneralImage]:
         """
         :class:`Meme`: Gets a meme from the API.
 
@@ -60,41 +60,33 @@ class Fun:
         ----------
         topic : :class:`str`
         """
-        response = await HTTPClient().get(f"meme/{topic}")
+        if topic:
+            response = await HTTPClient().get(f"meme/{topic}")
 
-        if response.status == 200:
-            json = await response.json()
-            return Meme(json)
+            if response.status == 200:
+                json = await response.json()
+                return Meme(json)
 
-        elif response.status == 422:
-            raise ValidationError("Recieved an invalid input")
+            elif response.status == 422:
+                raise ValidationError("Recieved an invalid input")
 
-        elif response.status == 500:
-            raise HTTPException("Internal Server Error")
+            elif response.status == 500:
+                raise HTTPException("Internal Server Error")
 
-        else:
-            raise HTTPException(f"HTTP Error: {response.status}")
-
-    @classmethod
-    async def single_meme(cls) -> GeneralImage:
-        """
-        :class:`GeneralImage`: Gets a single meme from the API.
-
-        Note::
-            This just returns the :class:`GeneralImage` class.
-            You can only use `.save()` in this method.
-            Reason::
-                There is no json in this response.
-                There is direct the image of the meme.
-                If you want a meme with all properties, use :meth:`meme`.
-        """
-        response = await HTTPClient().get("meme")
-
-        if response.status == 200:
-            return GeneralImage(await response.read())
+            else:
+                raise HTTPException(f"HTTP Error: {response.status}")
 
         else:
-            raise HTTPException(f"HTTP Error: {response.status}")
+            response = await HTTPClient().get("meme")
+
+            if response.status == 200:
+                return GeneralImage(await response.read())
+
+            elif response.status == 422:
+                raise ValidationError("Recieved an invalid input")
+
+            else:
+                raise HTTPException(f"HTTP Error: {response.status}")
 
     @classmethod
     async def wyr(cls, simple: Optional[bool] = False) -> List[str]:

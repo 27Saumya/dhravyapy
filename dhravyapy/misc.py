@@ -34,7 +34,7 @@ class Misc:
     """
 
     @classmethod
-    async def compliment(self, simple: Optional[bool] = False) -> str:
+    async def compliment(cls, simple: Optional[bool] = False) -> str:
         """
         :class:`str`: Gets a random compliment.
 
@@ -55,7 +55,7 @@ class Misc:
             raise HTTPException(f"HTTP Error: {response.status}")
 
     @classmethod
-    async def topic(self, simple: Optional[bool] = False) -> str:
+    async def topic(cls, simple: Optional[bool] = False) -> str:
         """
         :class:`str`: Gets a random topic.
 
@@ -77,7 +77,7 @@ class Misc:
 
     @classmethod
     async def translate(
-        self,
+        cls,
         text: str,
         from_lang: str,
         to_lang: Optional[str] = "en",
@@ -106,7 +106,7 @@ class Misc:
             raise HTTPException(f"HTTP Error: {response.status}")
 
     @classmethod
-    async def ascii(self, text: str, font: Optional[str] = None):
+    async def ascii(cls, text: str, font: Optional[str] = None):
         """
         :class:`str`: Gets an ASCII art of the text.
 
@@ -128,7 +128,7 @@ class Misc:
             raise HTTPException(f"HTTP Error: {response.status}")
 
     @classmethod
-    async def randomuser(self) -> RandomUserInfo:
+    async def randomuser(cls) -> RandomUserInfo:
         """
         :class:`RandomUserInfo`: Gets a random user.
         """
@@ -142,7 +142,7 @@ class Misc:
             raise HTTPException(f"HTTP Error: {response.status}")
 
     @classmethod
-    async def autofill(self, query: str) -> List[str]:
+    async def autofill(cls, query: str) -> List[str]:
         """
         :class:`List[str]`: Gets autofill suggestions for the query.
 

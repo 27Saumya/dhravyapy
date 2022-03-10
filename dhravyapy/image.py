@@ -33,6 +33,7 @@ class Image:
     The class to get Image data from the API
     """
 
+    @classmethod
     async def cat(self) -> Animal:
         """
         :class:`GeneralImage` Gets a random cat picture.
@@ -45,6 +46,7 @@ class Image:
         else:
             raise HTTPException(f"HTTP Error: {response.status}")
 
+    @classmethod
     async def dog(self) -> Animal:
         """
         :class:`GeneralImage` Gets a random dog picture.
@@ -57,6 +59,7 @@ class Image:
         else:
             raise HTTPException(f"HTTP Error: {response.status}")
 
+    @classmethod
     async def fox(self) -> Animal:
         """
         :class:`GeneralImage` Gets a random fox picture.
@@ -69,15 +72,12 @@ class Image:
         else:
             raise HTTPException(f"HTTP Error: {response.status}")
 
-    async def create_meme(
-        self, top: str, bottom: str, image: Optional[str] = None
-    ) -> GeneralImage:
+    @classmethod
+    async def create_meme(self, top: str, bottom: str, image: Optional[str] = None) -> GeneralImage:
         """
         :class:`GeneralImage` Creates a meme image.
         """
-        response = await HTTPClient().get(
-            f"meme?top={top}&bottom={bottom}&image={image}"
-        )
+        response = await HTTPClient().get(f"meme?top={top}&bottom={bottom}&image={image}")
 
         if response.status == 200:
             return GeneralImage(await response.read())
@@ -88,6 +88,7 @@ class Image:
         else:
             raise HTTPException(f"HTTP Error: {response.status}")
 
+    @classmethod
     async def mealsome(self, me: str, alsome: str) -> GeneralImage:
         """
         :class:`GeneralImage` Creates a me - also me meme image.
@@ -103,6 +104,7 @@ class Image:
         else:
             raise HTTPException(f"HTTP Error: {response.status}")
 
+    @classmethod
     async def itsretarded(self, text: str) -> GeneralImage:
         """
         :class:`GeneralImage` Creates a retarded meme image.
@@ -118,6 +120,7 @@ class Image:
         else:
             raise HTTPException(f"HTTP Error: {response.status}")
 
+    @classmethod
     async def headache(self, text: str) -> GeneralImage:
         """
         :class:`GeneralImage` Creates a headache meme image.
@@ -133,6 +136,7 @@ class Image:
         else:
             raise HTTPException(f"HTTP Error: {response.status}")
 
+    @classmethod
     async def classnote(self, text: str) -> GeneralImage:
         """
         :class:`GeneralImage` Creates a classnote meme image.
@@ -148,6 +152,7 @@ class Image:
         else:
             raise HTTPException(f"HTTP Error: {response.status}")
 
+    @classmethod
     async def nutbutton(self, text: str) -> GeneralImage:
         """
         :class:`GeneralImage` Creates a nutbutton meme image.
@@ -163,6 +168,7 @@ class Image:
         else:
             raise HTTPException(f"HTTP Error: {response.status}")
 
+    @classmethod
     async def pills(self, text: str) -> GeneralImage:
         """
         :class:`GeneralImage` Creates a pills meme image.
@@ -178,13 +184,12 @@ class Image:
         else:
             raise HTTPException(f"HTTP Error: {response.status}")
 
+    @classmethod
     async def balloon(self, text: str, person: str, stopper: str) -> GeneralImage:
         """
         :class:`GeneralImage` Creates a balloon meme image.
         """
-        response = await HTTPClient().get(
-            f"balloon?text={text}&person={person}&stopper={stopper}"
-        )
+        response = await HTTPClient().get(f"balloon?text={text}&person={person}&stopper={stopper}")
 
         if response.status == 200:
             return GeneralImage(await response.read())
@@ -195,6 +200,7 @@ class Image:
         else:
             raise HTTPException(f"HTTP Error: {response.status}")
 
+    @classmethod
     async def waifu(self) -> GeneralImage:
         """
         :class:`GeneralImage` Gets a waifu image.
@@ -210,15 +216,12 @@ class Image:
         else:
             raise HTTPException(f"HTTP Error: {response.status}")
 
-    async def qrcode(
-        self, query: str, drawer: Optional[int] = 1, mask: Optional[int] = 1
-    ) -> GeneralImage:
+    @classmethod
+    async def qrcode(self, query: str, drawer: Optional[int] = 1, mask: Optional[int] = 1) -> GeneralImage:
         """
         :class:`GeneralImage` Gets a qrcode image.
         """
-        response = await HTTPClient().get(
-            f"qrcode?query={query}&drawer={drawer}&mask={mask}"
-        )
+        response = await HTTPClient().get(f"qrcode?query={query}&drawer={drawer}&mask={mask}")
 
         if response.status == 200:
             return GeneralImage(await response.read())

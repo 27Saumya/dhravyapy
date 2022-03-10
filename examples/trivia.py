@@ -1,9 +1,9 @@
-import dhravya
+import dhravyapy
 import asyncio
 
 
 async def main():
-    trivia = dhravya.Info().trivia()
+    trivia = dhravyapy.Info().trivia()
     question = trivia.question
     ans = trivia.answer
 

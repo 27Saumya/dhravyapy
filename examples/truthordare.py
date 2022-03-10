@@ -1,9 +1,9 @@
-import dhravya
+import dhravyapy
 import asyncio
 
 
 async def main():
-    tod = dhravya.Fun.truthordare()
+    tod = dhravyapy.Fun.truthordare()
 
     # getting truth or dare from the api
     truth = tod.truth

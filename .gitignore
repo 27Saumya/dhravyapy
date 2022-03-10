@@ -1,7 +1,9 @@
 *.pyc
 *__pycache__/
 *.egg-info/
-*dist
+*dist/
 *setup.cfg
 *build/
 *test.py
+docs/
+# cuz work in progress added docs in the list

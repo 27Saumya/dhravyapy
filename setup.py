@@ -9,7 +9,7 @@ requirements = []
 with open("requirements.txt") as f:
     requirements = f.read().splitlines()
 
-VERSION = "0.0.8"
+VERSION = "0.0.9"
 
 setup(
     name="dhravyapy",
@@ -17,7 +17,7 @@ setup(
     url="https://github.com/27Saumya/dhravyapy",
     download_url="https://github.com/27Saumya/dhravyapy/archive/v{}.tar.gz".format(VERSION),
     version=VERSION,
-    packages=["dhravya"],
+    packages=["dhravyapy"],
     license="MIT",
     description="An asynchronous wrapper for interacting with the Dhravya API",
     long_description=long_description,

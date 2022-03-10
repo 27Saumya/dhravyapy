@@ -33,7 +33,8 @@ class Fun:
     The class to get fun related data from the API
     """
 
-    async def eightball(self, *, simple: Optional[bool] = False) -> str:
+    @classmethod
+    async def eightball(cls, *, simple: Optional[bool] = False) -> str:
         """
         :class:`str`: Gets a random 8ball response.
 
@@ -50,7 +51,8 @@ class Fun:
         else:
             raise HTTPException(f"HTTP Error: {response.status}")
 
-    async def meme(self, topic: str) -> Meme:
+    @classmethod
+    async def meme(cls, topic: str) -> Meme:
         """
         :class:`Meme`: Gets a meme from the API.
 
@@ -73,7 +75,8 @@ class Fun:
         else:
             raise HTTPException(f"HTTP Error: {response.status}")
 
-    async def single_meme(self) -> GeneralImage:
+    @classmethod
+    async def single_meme(cls) -> GeneralImage:
         """
         :class:`GeneralImage`: Gets a single meme from the API.
 
@@ -93,7 +96,8 @@ class Fun:
         else:
             raise HTTPException(f"HTTP Error: {response.status}")
 
-    async def wyr(self, simple: Optional[bool] = False) -> List[str]:
+    @classmethod
+    async def wyr(cls, simple: Optional[bool] = False) -> List[str]:
         """
         :class:`str`: Gets a random "Would You Rather" question.
 
@@ -113,7 +117,8 @@ class Fun:
         else:
             raise HTTPException(f"HTTP Error: {response.status}")
 
-    async def truthordare(self, simple: Optional[bool] = False) -> TruthOrDare:
+    @classmethod
+    async def truthordare(cls, simple: Optional[bool] = False) -> TruthOrDare:
         """
         :class:`str`: Gets a random truth or dare.
 
@@ -133,7 +138,8 @@ class Fun:
         else:
             raise HTTPException(f"HTTP Error: {response.status}")
 
-    async def roast(self, simple: Optional[bool] = False) -> str:
+    @classmethod
+    async def roast(cls, simple: Optional[bool] = False) -> str:
         """
         :class:`str`: Gets a random roast.
 
@@ -153,7 +159,8 @@ class Fun:
         else:
             raise HTTPException(f"HTTP Error: {response.status}")
 
-    async def truth(self, simple: Optional[bool] = False) -> str:
+    @classmethod
+    async def truth(cls, simple: Optional[bool] = False) -> str:
         """
         :class:`str`: Gets a random truth.
 
@@ -177,7 +184,8 @@ class Fun:
         else:
             raise HTTPException(f"HTTP Error: {response.status}")
 
-    async def dare(self, simple: Optional[bool] = False) -> str:
+    @classmethod
+    async def dare(cls, simple: Optional[bool] = False) -> str:
         """
         :class:`str`: Gets a random dare.
 
@@ -201,7 +209,8 @@ class Fun:
         else:
             raise HTTPException(f"HTTP Error: {response.status}")
 
-    async def joke(self, simple: Optional[bool] = False) -> str:
+    @classmethod
+    async def joke(cls, simple: Optional[bool] = False) -> str:
         """
         :class:`str`: Gets a random joke.
 
@@ -221,7 +230,8 @@ class Fun:
         else:
             raise HTTPException(f"HTTP Error: {response.status}")
 
-    async def neverhaveiever(self, simple: Optional[bool] = False) -> str:
+    @classmethod
+    async def neverhaveiever(cls, simple: Optional[bool] = False) -> str:
         """
         :class:`str`: Gets a random "Never Have I Ever" question.
 

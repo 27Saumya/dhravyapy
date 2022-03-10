@@ -1,9 +1,9 @@
-import dhravya
+import dhravyapy
 import asyncio
 
 
 async def main():
-    joke = await dhravya.Fun().joke()
+    joke = await dhravyapy.Fun().joke()
     print(joke)
 
 

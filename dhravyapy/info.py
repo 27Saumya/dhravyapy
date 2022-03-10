@@ -33,6 +33,7 @@ class Info:
     The class to get information related data from the API
     """
 
+    @classmethod
     async def fact(self, simple: Optional[bool] = False) -> str:
         """
         :class:`str`: Gets a random fact.
@@ -53,6 +54,7 @@ class Info:
         else:
             raise HTTPException(f"HTTP Error: {response.status}")
 
+    @classmethod
     async def trivia(self, simple: Optional[bool] = False) -> Trivia:
         """
         :class:`str`: Gets a random trivia question.
@@ -73,6 +75,7 @@ class Info:
         else:
             raise HTTPException(f"HTTP Error: {response.status}")
 
+    @classmethod
     async def lyrics(self, song: str, simple: Optional[bool] = False) -> str:
         """
         :class:`str`: Gets the lyrics of a song.
@@ -94,6 +97,7 @@ class Info:
         else:
             raise HTTPException(f"HTTP Error: {response.status}")
 
+    @classmethod
     async def song_info(self, song: str) -> SongInfo:
         """
         :class:`str`: Gets the information of a song.
@@ -114,6 +118,7 @@ class Info:
         else:
             raise HTTPException(f"HTTP Error: {response.status}")
 
+    @classmethod
     async def minecraft_status(self, host: str, port: Optional[str] = None) -> str:
         """
         :class:`str`: Gets the status of a minecraft server.
@@ -135,6 +140,7 @@ class Info:
         else:
             raise HTTPException(f"HTTP Error: {response.status}")
 
+    @classmethod
     async def bored(self) -> str:
         """
         :class:`str`: Gets a bored fact.
@@ -148,6 +154,7 @@ class Info:
         else:
             raise HTTPException(f"HTTP Error: {response.status}")
 
+    @classmethod
     async def numberfact(self, number: int) -> str:
         """
         :class:`str`: Gets a fact about a number.

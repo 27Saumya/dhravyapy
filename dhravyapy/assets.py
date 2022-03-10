@@ -28,7 +28,8 @@ import aiofiles
 
 from .http import HTTPClient
 from .errors import HTTPException
-import dhravya
+import dhravyapy
+
 
 class Meme:
     """
@@ -58,7 +59,7 @@ class Meme:
             await f.close()
         else:
             raise HTTPException(f"HTTP Error: {r.status}")
-            
+
     async def get_bytes(self) -> BytesIO:
         """
         Returns the meme as a BytesIO object
@@ -224,7 +225,7 @@ class SongInfo:
         """
         :class:`str`: The lyrics of the song.
         """
-        return await dhravya.info.Info().lyrics(self.json["response"]["result"]["full_title"])
+        return await dhravyapy.info.Info.lyrics(self.json["response"]["result"]["full_title"])
 
     @property
     def dict(self) -> dict:
@@ -319,9 +320,7 @@ class RandomUserInfo:
         """
         :class:`str`: The full name of the user.
         """
-        return (
-            self.json["data"]["name"]["first"] + " " + self.json["data"]["name"]["last"]
-        )
+        return self.json["data"]["name"]["first"] + " " + self.json["data"]["name"]["last"]
 
     @property
     def email(self) -> str:
@@ -461,7 +460,7 @@ class Animal:
         await f.write(self.bytes)
         await f.close()
 
-    async def get_bytes(self) -> bytes :
+    async def get_bytes(self) -> bytes:
         """
         Get the image of the animal in bytes.
 
@@ -498,7 +497,7 @@ class GeneralImage:
         await f.write(self.bytes)
         await f.close()
 
-    async def get_bytes(self) -> bytes :
+    async def get_bytes(self) -> bytes:
         """
         Get the image in bytes.
 

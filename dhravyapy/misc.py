@@ -33,6 +33,7 @@ class Misc:
     The class to get Miscellaneous data from the API
     """
 
+    @classmethod
     async def compliment(self, simple: Optional[bool] = False) -> str:
         """
         :class:`str`: Gets a random compliment.
@@ -53,6 +54,7 @@ class Misc:
         else:
             raise HTTPException(f"HTTP Error: {response.status}")
 
+    @classmethod
     async def topic(self, simple: Optional[bool] = False) -> str:
         """
         :class:`str`: Gets a random topic.
@@ -73,6 +75,7 @@ class Misc:
         else:
             raise HTTPException(f"HTTP Error: {response.status}")
 
+    @classmethod
     async def translate(
         self,
         text: str,
@@ -90,9 +93,7 @@ class Misc:
         to_lang : The language to translate to. Optional[:class:`str`]
         simple : Wheter the translation should be simple. Optional[:class:`bool`]
         """
-        response = await HTTPClient().get(
-            f"translate?text={text}&from={from_lang}&to={to_lang}&simple={simple}"
-        )
+        response = await HTTPClient().get(f"translate?text={text}&from={from_lang}&to={to_lang}&simple={simple}")
 
         if response.status == 200:
             json = await response.json()
@@ -104,6 +105,7 @@ class Misc:
         else:
             raise HTTPException(f"HTTP Error: {response.status}")
 
+    @classmethod
     async def ascii(self, text: str, font: Optional[str] = None):
         """
         :class:`str`: Gets an ASCII art of the text.
@@ -125,6 +127,7 @@ class Misc:
         else:
             raise HTTPException(f"HTTP Error: {response.status}")
 
+    @classmethod
     async def randomuser(self) -> RandomUserInfo:
         """
         :class:`RandomUserInfo`: Gets a random user.
@@ -138,6 +141,7 @@ class Misc:
         else:
             raise HTTPException(f"HTTP Error: {response.status}")
 
+    @classmethod
     async def autofill(self, query: str) -> List[str]:
         """
         :class:`List[str]`: Gets autofill suggestions for the query.

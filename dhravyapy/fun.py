@@ -162,7 +162,7 @@ class Fun:
 
         Note::
         ------
-            This is a shortcut for :meth:`Fun().truthordare().truth`.
+            This is a shortcut for :meth:`Fun.truthordare().truth`.
         """
         response = await HTTPClient().get(f"truth?simple={simple}")
 
@@ -187,7 +187,7 @@ class Fun:
 
         Note::
         ------
-            This is a shortcut for :meth:`Fun().truthordare().dare`.
+            This is a shortcut for :meth:`Fun.truthordare().dare`.
         """
         response = await HTTPClient().get(f"dare?simple={simple}")
 

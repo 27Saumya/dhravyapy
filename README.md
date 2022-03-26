@@ -60,4 +60,4 @@ if __name__ == "__main__":
     loop.run_until_complete(main())
 ```
 
-For more examples see the examples directory.
+For more examples check out the examples directory.

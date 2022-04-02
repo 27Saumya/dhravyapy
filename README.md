@@ -28,7 +28,7 @@ pip install git+https://github.com/27Saumya/dhravyapy
 ### Examples
 To get a random joke
 ```py
-import dhravya
+import dhravyapy
 import asyncio
 
 async def main():
@@ -43,7 +43,7 @@ if __name__ == "__main__":
 
 To generate a qrcode
 ```py
-import dhravya
+import dhravyapy
 import asyncio
 
 async def main():

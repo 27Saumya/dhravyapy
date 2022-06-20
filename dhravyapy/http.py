@@ -26,7 +26,7 @@ import aiohttp
 
 
 class HTTPClient(aiohttp.ClientSession):
-    BASE_URL = "https://api.dhravya.me/"
+    BASE_URL = "https://api.dhravya.dev/"
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

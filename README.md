@@ -12,7 +12,7 @@
   * Get random jokes
   * Get random topics
   * Generate images and memes
-  * And much much more!
+  * And much more!
 
 ### Installation
 To install the library through [PyPi](https://pypi.org) use:-

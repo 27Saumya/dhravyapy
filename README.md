@@ -1,4 +1,6 @@
- **NOT WORKING AS OF NOW (DUE TO SOME DOMAIN ISSUES REGARDING THE API)**
+<div align="center">
+Deprecated [API no longer exists]
+</div>
 
 <div align="center">
 <a href="https://pypi.org/project/dhravyapy">

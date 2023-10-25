@@ -2,6 +2,7 @@
 Deprecated [API no longer exists]
 </div>
 
+
 <div align="center">
 <a href="https://pypi.org/project/dhravyapy">
     <img alt="Downloads" src="https://img.shields.io/pypi/dw/dhravyapy?color=blue">
